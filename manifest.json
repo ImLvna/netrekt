@@ -1,0 +1,40 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "NetRef: Classroom Management",
+  "description": "Manage. Monitor. Know.",
+  "version": "2020.8.2",
+  "manifest_version": 2,
+  "minimum_chrome_version":"73",
+  "background": {
+    "scripts":[
+      "background/helpers/moment.min.js",
+      "background/helpers/lz-string.js",
+
+      "background/netrefPlugin.js"
+    ],
+    "persistent":true
+  },
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "identity",
+    "identity.email",
+    "enterprise.deviceAttributes",
+    "notifications",
+    "webRequest"
+  ],
+  "icons": {
+    "16": "img/icon.png",
+    "22": "img/icon.png",
+    "32": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["background/helpers/mouseMoveDetection.js"]
+    }
+  ]
+}
