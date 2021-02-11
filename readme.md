@@ -1,6 +1,7 @@
 # Netrekt
 This is my attempt at bypassing netref.
 
+For now, I will be testing these methods in Cloudready Home Edition, running inside of VmWare
 
 ## Methods:
 ### Timezone Change
